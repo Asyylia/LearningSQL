@@ -3,10 +3,11 @@
 require_once 'config.php';
 
 try {
-
+    //nouveau paramètres
     $newName = "Asy";
-    $userID = 1;
+    $userID = 1; //ID de l'utilisateur à modifier
 
+    //requete update
     $stmt = $pdo->prepare(query: "UPDATE users SET name = :name WHERE id = :id");
     $stmt->execute(params: [
         ':name' => $newName,
@@ -21,3 +22,5 @@ try {
 } catch (PDOException $e) {
     echo "Erreur lors de la mise à jour :" . $e->getMessage();
 }
+
+//rowncount() permet de vériier si un changement a vraiment été effecgtué

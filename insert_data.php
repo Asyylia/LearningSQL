@@ -19,6 +19,5 @@ try {
     echo " Erreur lors de l'insertion des données : " . $e->getMessage();
 }
 
-//On utilise une requête préparée (prepare + execute) pour éviter les failles d'injection
-//A FAIRE = relancer le script avec la même adresse email (conflit unique sur email)
+//On utilise une requête préparée (prepare + execute) pour éviter les failles d'injection sQL
 ?>
